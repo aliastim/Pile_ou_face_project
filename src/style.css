@@ -1,3 +1,8 @@
+body
+{
+    background: #424242;
+}
+
 .footer
 {
     background: #424242;
@@ -14,3 +19,108 @@
     /*background: darkgrey;*/
     border: 3px groove darkgrey;
 }
+
+/* ---- masonry ---- */
+
+.grid {
+    background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item-big{
+    width: 66.666%;
+}
+
+.grid-item-total{
+    width: 100%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ------- */
+
+.container{
+    /*background: red;*/
+}
+
+.test1
+{
+    background: darkseagreen;
+    height: 200px;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+/* ------- */
+.round:before
+{
+    content: 'X';
+    text-align: center;
+    color: black;
+    right: 0;
+    margin-right: 2px;
+    top: 0;
+    margin-top: 2px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    z-index: 3;
+}
+
+.round:hover:before
+{
+    background: black;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.select-image
+{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.select-image:hover
+{
+    background: blue;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+/*
+.select-image:hover:before
+{
+    content: '';
+    position: absolute;
+    border: 1px solid black;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+}*/
