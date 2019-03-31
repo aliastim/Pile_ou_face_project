@@ -101,6 +101,7 @@ body
     /*background: darkgrey;*/
     border: 3px groove darkgrey;
 }
+/*****************************************GALERIE*****************************************/
 
 /* ---- masonry ---- */
 
@@ -132,6 +133,7 @@ body
 
 .grid-item {
     float: left;
+    border: 20px solid white;
 }
 
 .grid-item img {
@@ -168,7 +170,7 @@ body
     border-radius: 100px;
     height: 30px;
     width: 30px;
-    z-index: 3;
+    z-index: 2;
 }
 
 .round:hover:before
@@ -206,7 +208,7 @@ body
     height: 80%;
     z-index: 2;
 }*/
-
+/***************************************FIN GALERIE***************************************/
 /*****************************************ACCUEIL*****************************************/
 
 
@@ -311,7 +313,7 @@ body
 
 .accueil-button-logo
 {
-    background: url("../ressources/logo3.png");
+    background: url("../ressources/pile_ou_face_logo_melanie_rolland_iya_duclos_villain.png");
     background-size: 100% ;
     background-position: center ;
     background-repeat: no-repeat ;
@@ -530,4 +532,138 @@ body
     background-repeat: no-repeat;
 
 }
+/**************************************FIN ACCUEIL***************************************/
+/*****************************************VIDEOS*****************************************/
+.masthead
+{
+    height: 70vh;
+    min-height: 500px;
+    background-image: url('../ressources/img/melanie_rolland_Iya_duclos_villain_pile_ou_face_project.jpg');
+    background-size: cover;
+    /*background-position: 0 -300px;*/
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.title_videos
+{
+    font-family: "Helvetica Neue";
+    color: black;
+    font-size: 5rem;
+    font-weight: 500 !important;
+    letter-spacing: 2px;
+    background: rgba(255, 255, 255, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-important-souligne
+{
+    color: black;
+    font-size: 2rem;
+    font-family: "Helvetica Neue";
+    padding-top: 50px;
+}
+
+.title-important-souligne:after {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: black;
+    display: block;
+    /*margin: 15px auto;*/
+    margin-top: 5px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.title-important-souligne:hover:after {
+    width: 130px;
+    height: 4px;
+    /*cursor: pointer;*/
+}
+
+.videos-video
+{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.text-voir-plus
+{
+    color: #424242 !important;
+}
+/**************************************FIN VIDÉOS***************************************/
+/**************************************IYA et MEL***************************************/
+
+.masthead-iya {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.title_cv
+{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "Helvetica Neue";
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.title_cv:after
+{
+    content: '';
+    width: 200px;
+    height: 3px;
+    background: black;
+    display: block;
+    /*margin: 15px auto;*/
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.title_cv:hover:after {
+    width: 300px;
+    height: 4px;
+    /*cursor: pointer;*/
+}
+
+.CV-video
+{
+ width: 100%;
+height: 400px;
+}
+
+.text_cv
+{
+    text-align: justify;
+    font-family: "Helvetica Neue";
+}
+
+.citation_cv
+{
+    font-family: "Helvetica Neue";
+    font-size: 1.3rem;
+    color: #aaaaaa;
+}
+
+.citation-name
+{
+    font-family: "Helvetica Neue";
+    font-size: 0.8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
