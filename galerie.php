@@ -7,9 +7,14 @@ ini_set('display_errors', 1);   // Idem
 
 require __DIR__ . "/bootstrap.php";
 
+use App\Entity\Images_accueil;
 
-echo $twig->render('homepage.html.twig', [
-    'title' => 'Accueil',
+$repo     = $entityManager->getRepository(Images_accueil::class);
+$images = $repo->findAll();
+
+echo $twig->render('galerie.html.twig', [
+    'title' => 'Galerie',
+    'images' => $images,
     'isConnected' => isset($_SESSION['isConnected']),
     //'username' => $_SESSION['username'],
 ]);

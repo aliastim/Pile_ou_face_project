@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+    <div class="header-video">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center justify-content-center">
+                <div class="text-white container-accueil">
+                    <h1 class="display-3">Pile ou Face</h1>
+                    <h2 class="lead mb-0">Dance duo - French feminine touch</h2>
+                    <hr class="accueil-line">
+                    <div class="accueil-buttons">
+                        <a class="accueil-button accueil-button-texte" href="#">IYA</a>
+                        <a class="accueil-button accueil-button-logo" data-toggle="modal" data-target="#exampleModal"></a>
+                        <a class="accueil-button accueil-button-texte" href="#">MEL</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pile ou face -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Qui sommes-nous ?</h5>
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>-->
+                </div>
+                <div class="modal-body text-center">
+                    <img src="../ressources/logo3.png" style="max-height: 200px;"><br><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eleifend, quam sed efficitur tincidunt, nunc tellus lobortis urna, vitae consectetur mi erat at mauris. Donec eu venenatis sem, sit amet iaculis risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque imperdiet est eu lacus sagittis fringilla. Quisque facilisis, diam in elementum tempus, libero mauris molestie erat, a condimentum nisl risus nec justo. Proin ac diam sem. Ut tempus finibus lacus, nec suscipit sapien. Morbi elementum erat nunc, et imperdiet enim euismod non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam in egestas urna. Sed pulvinar, felis et egestas gravida, ante sem luctus ante, sed egestas lorem tellus vitae elit. Praesent id imperdiet lorem. Quisque vel ipsum a diam consectetur dapibus. Nullam maximus efficitur tellus, eget iaculis lacus tincidunt sit amet. Cras venenatis quis mauris sed egestas.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn modal-bouton-fermer" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar fixed-bottom d-flex nav-foot" style="z-index: 2;">
+        <div class="mr-auto"><p class="accueil-footer-texte">©PileouFaceProject | <a class="navbar-brand" data-toggle="modal" data-target="#exampleModal2" href="#">Mention légales</a></p></div>
+        <div class="row">
+            <a href="https://www.instagram.com/pileoufaceproject/" target="_blank"><div class="accueil-icone-insta"></div> </a>
+            <a href="https://www.facebook.com/pileoufaceproject/" target="_blank"><div class="accueil-icone-facebook"></div> </a>
+            <a href="#"><div class="accueil-icone-video"></div> </a>
+        </div>
+    </nav>
+
+    <!-- Mentions légales -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mentions Légales</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="img-mentions-legales mx-auto "></div>
+                    <p style="font-size: 1rem; margin-top: 10px; margin-bottom: -5px; ">Ce site a été réalisé par <a href="https://www.timothee-corrado.com" target="_blank"><h2>Timothée CORRADO</h2></a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn modal-bouton-fermer" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

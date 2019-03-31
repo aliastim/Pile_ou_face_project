@@ -14,7 +14,8 @@
 
     <header class="container">
         {% block header %}
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <!--
+            <nav class="navbar navbar-expand-lg fixed-top parametres_nav">
                 <a class="navbar-brand" href="index.php">Accueil</a>
                 {% if isConnected|default(false) %}
                     <a class="navbar-brand" href="admin_users_list.php">Liste d'utilisateurs</a>
@@ -26,28 +27,34 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="d-flex mr-auto"></div>
                     <div class="navbar-nav">
-                        <!--<a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>-->
+
                         {% if isConnected|default(false) %}
                             <form action="logout.php" method="post" class="form-inline my-2 my-lg-0">
                                 <input type="submit" class="btn btn-outline-danger my-2 my-sm-0" value="Logout">
                             </form>
                         {% else %}
                             <form action="login.php" method="post" class="form-inline my-2 my-lg-0" style="padding-right: 10px;">
-                                <!--
-                                <input name="email" type="email" class="form-control mr-sm-2" placeholder="Email">
-                                <input name="password" type="password" class="form-control mr-sm-2" placeholder="Password">-->
+
                                 <input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Login">
                             </form>
                             <form action="registration.php" method="post" class="form-inline my-2 my-lg-0">
-                                <!--
-                                <input name="email" type="email" class="form-control mr-sm-2" placeholder="Email">
-                                <input name="password" type="password" class="form-control mr-sm-2" placeholder="Password">-->
+
                                 <input type="submit" class="btn btn-warning my-2 my-sm-0" value="S'inscrire">
                             </form>
                         {% endif %}
                     </div>
                 </div>
-            </nav>
+            </nav>-->
+            <div class="menu-bg"></div>
+            <div class="menu-burger">☰</div>
+            <div class="menu-items">
+                <div><a href="#home">ACCUEIL</a></div>
+                <div><a href="#problem">VIDÉOS</a></div>
+                <div><a href="#solution">GALERIE</a></div>
+                <div><a href="#team">CONTACT</a></div>
+                <div><a href="#platform">MÉLANIE</a></div>
+                <div><a href="#team">IYA</a></div>
+            </div>
         {% endblock %}
     </header>
 
@@ -55,6 +62,7 @@
         {% block main %} {% endblock %}
     </main>
 
+    <!--
     <footer class="container">
         {% block footer %}
             <div class="footer">
@@ -62,10 +70,12 @@
             </div>
         {% endblock %}
     </footer>
-
+-->
 {% endblock %}
 
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script language="JavaScript" src="../src/menu.js"></script>
+
 <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
 <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js'></script>
 
