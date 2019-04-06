@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+
+    <div class="header-video">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center justify-content-center">
+                <div class="text-white container-accueil">
+                    <h1 class="display-3">Contact</h1>
+                    <hr class="accueil-line">
+                    <div class="accueil-buttons">
+                        <a class="contact-button contact-button-facebook" href="https://www.facebook.com/pileoufaceproject/" target="_blank"></a>
+                        <a class="contact-button contact-button-insta" href="https://www.instagram.com/pileoufaceproject/" target="_blank"></a>
+                        <a class="contact-button contact-button-youtube" href="https://www.youtube.com/channel/UCfWmjCbQp5ngqIWx-78GaRg" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom d-flex nav-foot" style="z-index: 2;">
+        <div class="mx-auto"><p class="accueil-footer-texte">©PileouFaceProject | <a class="navbar-brand" data-toggle="modal" data-target="#exampleModal2" href="#">Mention légales</a></p></div>
+    </nav>
+
+    <!-- Mentions légales -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Mentions Légales</h5>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="img-mentions-legales mx-auto "></div>
+                    <p style="font-size: 1rem; margin-top: 10px; margin-bottom: -5px; ">Ce site a été réalisé par <a href="https://www.timothee-corrado.com" target="_blank"><h2>Timothée CORRADO</h2></a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn modal-bouton-fermer" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

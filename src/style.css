@@ -101,12 +101,21 @@ body
     /*background: darkgrey;*/
     border: 3px groove darkgrey;
 }
+
+@media screen and (max-width: 991px)
+{
+    .menu-items.fs div {
+        opacity: 1;
+        margin-top: 25px;
+    }
+
+}
 /*****************************************GALERIE*****************************************/
 
 /* ---- masonry ---- */
 
 .grid {
-    background: #DDD;
+    /*background: #DDD;*/
 }
 
 /* clear fix */
@@ -139,6 +148,14 @@ body
 .grid-item img {
     display: block;
     max-width: 100%;
+}
+
+@media screen and (max-width: 509px)
+{
+    .grid-item
+    {
+        border: 5px solid white;
+    }
 }
 
 /* ------- */
@@ -644,8 +661,15 @@ body
 .CV-video
 {
  width: 100%;
-height: 400px;
+ height: 400px;
+ opacity: 0.8;
 }
+
+.CV-video:hover
+{
+    opacity: 1;
+}
+
 
 .text_cv
 {
@@ -666,4 +690,95 @@ height: 400px;
     font-size: 0.8rem;
     font-weight: 200;
     letter-spacing: 2px;
+}
+
+@media screen and (max-width: 991px){
+    .cover-cv
+    {
+        display: none;
+    }
+}
+
+/***********************************FIN IYA et MEL***************************************/
+/***************************************CONTACT******************************************/
+
+.contact-button
+{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid white;*/
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    text-align: center;
+    /*font-family: "Helvetica Neue";
+    color: white !important;*/
+}
+
+.contact-button-facebook
+{
+    background: url("../ressources/Icones_2/social-facebook-circular-button.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-button-facebook:hover
+{
+    background: url("../ressources/Icones_2/facebook-logo-button.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-button-youtube
+{
+    background: url("../ressources/Icones_2/social-youtube-circular-button.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-button-youtube:hover
+{
+    background: url("../ressources/Icones_2/youtube-logotype.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-button-insta
+{
+    background: url("../ressources/Icones_2/insta.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-button-insta:hover
+{
+    background: url("../ressources/Icones_2/insta(1).png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@media screen and (min-width: 410px) and (max-width: 768px)
+{
+    .contact-button
+    {
+        width: 70px !important;
+        height: 70px !important;
+    }
+}
+
+@media screen and (max-width: 409px)
+{
+
+    .contact-button
+    {
+        width: 60px !important;
+        height: 60px !important;
+    }
+
 }
