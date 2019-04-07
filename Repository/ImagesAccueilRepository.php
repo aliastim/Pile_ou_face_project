@@ -17,6 +17,7 @@ class ImagesAccueilRepository extends EntityRepository
     public function loadAll($limit = 500, $offset = 0)
     {
         $queryBuilder = $this->createQueryBuilder('u');
+        /*$queryBuilder->orderBy('id DESC');*/
         $queryBuilder->setFirstResult($offset);
         $queryBuilder->setMaxResults($limit);
 

@@ -10,7 +10,10 @@ require __DIR__ . "/bootstrap.php";
 use App\Entity\Images_accueil;
 
 $repo     = $entityManager->getRepository(Images_accueil::class);
-$images = $repo->findAll();
+$images = $repo->findBy(
+    array(),
+    array('id' => 'DESC')
+);
 
 echo $twig->render('galerie.html.twig', [
     'title' => 'Galerie',
