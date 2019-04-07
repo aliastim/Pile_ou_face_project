@@ -28,12 +28,11 @@ class Images_accueil
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\GeneratedValue(strategy="AUTO")
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
-    private $id_image;
+    private $name;
 
     /**
      * @var string
@@ -45,9 +44,30 @@ class Images_accueil
     /**
      * @var string
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $image_size;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $lieu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
+    private $type;
 
     /**
      * @return int
@@ -70,20 +90,20 @@ class Images_accueil
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getId_image(): ?int
+    public function getName(): ?string
     {
-        return $this->id_image;
+        return $this->name;
     }
 
     /**
      * @return Images_accueil
-     * @param int $id_image
+     * @param string $name
      */
-    public function setId_image($id_image): Images_accueil
+    public function setName($name): Images_accueil
     {
-        $this->id_image = $id_image;
+        $this->name = $name;
 
         return $this;
     }
@@ -119,9 +139,66 @@ class Images_accueil
      * @return Images_accueil
      * @param string $image_size
      */
-    public function setName($image_size): Images_accueil
+    public function setImage_size($image_size): Images_accueil
     {
         $this->image_size = $image_size;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return Images_accueil
+     * @param string $description
+     */
+    public function setDescription($description): Images_accueil
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLieu(): ?string
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @return Images_accueil
+     * @param string $lieu
+     */
+    public function setLieu($lieu): Images_accueil
+    {
+        $this->lieu = $lieu;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType(): ?string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return Images_accueil
+     * @param string $type
+     */
+    public function setType($type): Images_accueil
+    {
+        $this->type = $type;
 
         return $this;
     }

@@ -9,26 +9,53 @@
            <div class="row">
                <div class="col-12">
                    <h2 class="title-important-souligne" style="margin-left: 20px;">Notre Galerie photos</h2>
-                   <form>
-                       <input type="button" value="Ajouter une image">
+
+                       <button class="btn" data-toggle="modal" data-target="#ajout_image">Ajouter une image</button>
                        <p>delete length.id - 14 OU ne pas mettre une limite de 15 et laisser le choix du nombre (suppression manuelle de la 16ème)<br>
                        X = modifier description image | Supprimer image | modifier titre image | modifier lieu</p>
-                   </form>
+
+                   <div class="modal fade" id="ajout_image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                       <div class="modal-dialog modal-dialog-centered" role="document">
+                           <div class="modal-content">
+                               <div class="modal-body">
+                                   <form method="post" action="../upload.php" enctype="multipart/form-data">
+                                   <p>Ajouter une image</p>
+                                       <label for="mon_fichier">Télécharger mon image :</label><br />
+                                       <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                                       <input type="file" name="mon_fichier" id="mon_fichier" /><br />
+
+                                       <label for="titre">Titre de mon image :</label><br />
+                                       <input type="text" name="titre" value="" id="titre" /><br />
+
+                                       <label for="description">Description de l'image (facultatif) :</label><br />
+                                       <textarea name="description" id="description" maxlength="255"></textarea><br />
+
+                                       <label for="lieu">Où a été prise l'image ? (facultatif) :</label><br />
+                                       <input type="text" name="lieu" value="" id="lieu"/><br />
+                                       <input type="submit" name="submit" value="Envoyer" />
+                                   </form>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+
+
+
                    <div class="grid">
                        <div class="grid-sizer"></div>
 
                        {% for image in images %}
                            <div class="grid-item {{image.image_size}}">
-                               <div class=" round" data-toggle="modal" data-target="#exampleModal{{image.id_image}}-Admin"></div>
-                               <div class="select-image" data-toggle="modal" data-target="#exampleModal{{image.id_image}}"></div>
+                               <div class=" round" data-toggle="modal" data-target="#exampleModal{{image.id}}-Admin"></div>
+                               <div class="select-image" data-toggle="modal" data-target="#exampleModal{{image.id}}"></div>
                                <img src="{{ image.file }}" />
                            </div>
 
-                           <div class="modal fade" id="exampleModal{{image.id_image}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal fade" id="exampleModal{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                <div class="modal-dialog modal-dialog-centered" role="document" style="text-align: center; height: max-content; max-width: max-content;">
                                    <div class="modal-content" style="background: white; border: none;">
                                        <div class="modal-body" style="padding: 0;">
-                                           <h5>{{image.id_image}}</h5>
+                                           <h5>{{image.id}}</h5>
                                            <img src="{{ image.file }}" style="width: 100%;">
                                        </div>
                                    </div>
