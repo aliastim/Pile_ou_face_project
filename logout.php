@@ -8,6 +8,10 @@
 
 require __DIR__ . "/bootstrap.php";
 
+/*foreach($_COOKIE as $cle => $element)
+{
+    setcookie($cle, '', time()-3600);
+}*/
 session_destroy();
 
-header('Location:index.php');
+header('Location:login.php');

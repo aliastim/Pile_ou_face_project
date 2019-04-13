@@ -1,6 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+    {% if session|default(false) %}
+        <div class="connectedName">
+            <p>Bonjour <strong>{{ session }}</strong> </p>
+        </div>
+    {% endif %}
 
     <div class="header-video">
         <div class="overlay"></div>

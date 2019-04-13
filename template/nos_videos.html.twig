@@ -6,7 +6,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
-                    <h1 class="font-weight-light title_videos">Nos Vidéos</h1>
+                    <h1 class="font-weight-light title_videos">Nos Videos</h1>
                     <!--<p class="lead">A great starter layout for a landing page</p>-->
                 </div>
             </div>
@@ -15,10 +15,38 @@
 
     <div class="section" style="width: 100%; background: white; padding-bottom: 50px;">
 
-        <div class="container">
+        <div class="container" style="position: relative;">
             <h2 class="title-important-souligne">Grosses vidéos</h2>
+            {% if isConnected|default(false)  %}
+                <a class="btn-video" data-toggle="modal" data-target="#ajout_video" ></a>
+
+                <div class="modal fade" id="ajout_video" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <form method="post" action="../upload.php" enctype="multipart/form-data">
+                                    <p>Ajouter une video</p>
+
+                                    <label for="titre">Lien Youtube :</label><br />
+                                    <input type="text" name="lien" value="" id="lien" required/><br />
+
+                                    <label for="categorie">Choisir la catégorie</label>
+                                    <select class="custom-select" id="categorie" name="categorie">
+                                        <option selected>Choisir...</option>
+                                        <option value="1">Grosses vidéos</option>
+                                        <option value="2">Freestyles</option>
+                                        <option value="3">Challenges</option>
+                                    </select>
+                                    <input type="submit" name="submit" value="Envoyer" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
             <div class="row text-center justify-content-center">
                 <div class="col-lg-4">
+                    <div class="videos-modif"></div>
                     <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-4">

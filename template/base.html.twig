@@ -54,6 +54,9 @@
                 <div><a href="../contact.php">CONTACT</a></div>
                 <div><a href="../melanie_rolland.php">MÉLANIE</a></div>
                 <div><a href="../iya_duclos_villain.php">IYA</a></div>
+                {% if isConnected|default(false) %}
+                    <div><a href="../logout.php" style="color: #DC6180; font-size: 1rem;">DÉCONNEXION</a></div>
+                {% endif %}
             </div>
         {% endblock %}
     </header>

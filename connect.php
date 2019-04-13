@@ -41,23 +41,26 @@ if (!empty($usernameinit) && !empty($passwordinit)) //si username et password so
         $password = $user->getPassword();
         dump($user);*/
 
-        if ($usernameinit === $user->getMail() && $passwordinit === $user->getPassword()) {
+        if ($usernameinit === $user->getMail() && password_verify($passwordinit, $user-> getPassword())) {
             echo 'connecté';
 
             $_SESSION['isConnected']= true;
             $_SESSION['id'] = $user->getId();
             $_SESSION['username'] = $user->getMail();//$user['username']
-            $_SESSION['password'] = $user->getPassword();//$user['password']
+            /*$_SESSION['password'] = $user->getPassword();//$user['password']*/
             $_SESSION['firstname'] = $user->getFirstname();
             $_SESSION['name'] = $user->getName();
 
 
             //dump($_SESSION);
             header('Location: index.php');
+            break;
 
         } else
         {
             echo 'mauvais identifiants ';
+            $erreur= "bad_credentials";
+            header('Location: login.php?error=true');
 
 
         }
@@ -65,6 +68,9 @@ if (!empty($usernameinit) && !empty($passwordinit)) //si username et password so
        // die();
 
     }
+} else
+{
+    header('Location: login.php?void=true');
 }
 
 

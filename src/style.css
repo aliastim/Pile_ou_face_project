@@ -3,6 +3,11 @@ body
     background: #424242;
 }
 
+@font-face {
+    font-family: Rockness;
+    src: url('../ressources/polices/Rockness.ttf');
+}
+
 .parametres_nav
 {
     /*background: rgba(255,255,255,0.5) !important;*/
@@ -175,7 +180,9 @@ body
 /* ------- */
 .round:before
 {
-    content: 'X';
+    content: '';
+    background: url("../ressources/Icones_2/error(1).png") no-repeat center;
+    background-size: contain;
     text-align: center;
     color: black;
     right: 0;
@@ -183,7 +190,7 @@ body
     top: 0;
     margin-top: 2px;
     position: absolute;
-    border: 1px solid black;
+   /* border: 1px solid black;*/
     border-radius: 100px;
     height: 30px;
     width: 30px;
@@ -192,7 +199,9 @@ body
 
 .round:hover:before
 {
-    background: black;
+    background: url("../ressources/Icones_2/error.png") no-repeat center;
+    background-size: contain;
+    /*background: black;*/
     border: none;
     cursor: pointer;
     color: white;
@@ -225,6 +234,25 @@ body
     height: 80%;
     z-index: 2;
 }*/
+
+.btn-galerie
+{
+    height: 40px;
+    width: 40px;
+    /*border: 2px solid #aaaaaa;*/
+    border-radius: 50%;
+    right: 30px;
+    top: 50px;
+    background-size: contain !important;
+    background: url("../ressources/Icones/plus.png") no-repeat center;
+    position: absolute;
+}
+
+.btn-galerie:hover
+{
+    background: url("../ressources/Icones/plus(1).png") no-repeat center;
+    cursor: pointer;
+}
 /***************************************FIN GALERIE***************************************/
 /*****************************************ACCUEIL*****************************************/
 
@@ -285,8 +313,10 @@ body
 
 .display-3
 {
-    font-size: 6rem;
-    font-family: "Helvetica Neue";
+    /*font-size: 6rem;
+    font-family: "Helvetica Neue";*/
+    font-size: 8rem;
+    font-family: Rockness, "Helvetica Neue";
     font-weight: 700;
     /*text-align: justify;*/
 }
@@ -364,8 +394,10 @@ body
 {
     .display-3
     {
-        font-size: 4rem;
-        font-family: "Helvetica Neue";
+        /*font-size: 4rem;
+        font-family: "Helvetica Neue";*/
+        font-size: 5.5rem;
+        font-family: Rockness, "Helvetica Neue";
         font-weight: 700;
         /*text-align: justify;*/
     }
@@ -383,8 +415,10 @@ body
 {
     .display-3
     {
-        font-size: 3rem;
-        font-family: "Helvetica Neue";
+        /*font-size: 3rem;
+        font-family: "Helvetica Neue";*/
+        font-size: 4rem;
+        font-family: Rockness, "Helvetica Neue";
         font-weight: 700;
         /*text-align: justify;*/
     }
@@ -549,6 +583,20 @@ body
     background-repeat: no-repeat;
 
 }
+
+.connectedName
+{
+    position: absolute;
+    z-index: 9999;
+    font-size: 1rem;
+    font-family: "Helvetica Neue";
+    top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 15px;
+    letter-spacing: 2px;
+    color: white;
+}
 /**************************************FIN ACCUEIL***************************************/
 /*****************************************VIDEOS*****************************************/
 .masthead
@@ -564,14 +612,24 @@ body
 
 .title_videos
 {
-    font-family: "Helvetica Neue";
+    /*font-family: "Helvetica Neue";
+    font-size: 5rem;*/
+    font-family: Rockness, "Helvetica Neue";
+    font-size: 8rem;
     color: black;
-    font-size: 5rem;
     font-weight: 500 !important;
     letter-spacing: 2px;
     background: rgba(255, 255, 255, 0.8);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 767px)
+{
+    .title_videos
+    {
+        font-size: 5rem;
+    }
 }
 
 .title-important-souligne
@@ -609,9 +667,53 @@ body
     margin-bottom: 50px;
 }
 
+.videos-modif:after
+{
+    content: '';
+    background: url("../ressources/Icones_2/error(1).png") no-repeat center;
+    background-size: contain;
+    text-align: center;
+    /*background: red;*/
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    margin-top: -15px;
+}
+
+.videos-modif:hover:before
+{
+    background: url("../ressources/Icones_2/error.png") no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
 .text-voir-plus
 {
     color: #424242 !important;
+}
+
+.btn-video
+{
+    height: 40px;
+    width: 40px;
+    /*border: 2px solid #aaaaaa;*/
+    border-radius: 50%;
+    right: 10px;
+    top: 50px;
+    background-size: contain !important;
+    background: url("../ressources/Icones/plus.png") no-repeat center;
+    position: absolute;
+}
+
+.btn-video:hover
+{
+    background: url("../ressources/Icones/plus(1).png") no-repeat center;
+    cursor: pointer;
 }
 /**************************************FIN VIDÉOS***************************************/
 /**************************************IYA et MEL***************************************/
@@ -781,4 +883,505 @@ body
         height: 60px !important;
     }
 
+}
+
+/*************************************FIN CONTACT****************************************/
+/****************************************LOGIN*******************************************/
+.container-login
+{
+    margin: auto;
+    margin-top: 5vh;
+    width: 500px;
+    height: 670px;
+    /*background: linear-gradient(to bottom, #505050 60%, #424242 100%) ;*/
+    background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+    /*text-align: center;*/
+    border-radius: 10px ;
+    box-shadow: 0px 0px 10px black;
+    /*padding: 20px;*/
+    position: relative;
+}
+
+.container-login:before
+{
+    position: absolute;
+    content: 'Page de connexion';
+    font-family: Rockness;
+    text-shadow: 1px 1px rgba(255,255,255,0.1), -1px -1px rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0);
+
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%) !important;
+    border-radius: 10px 10px 0px 0;
+}
+
+.container-login hr
+{
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%) !important;
+    border-image-slice: 60 30 !important;
+}
+.container-login h1
+{
+    font-family: Rockness;
+   text-shadow: 1px 1px rgba(255,255,255,0.1), -1px -1px rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0);
+}
+
+.container-login form .form-group input
+{
+    color: #afb1be;
+    background: #32364a;
+    border-top: 2px solid #393d52;
+    border-bottom: 2px solid #393d52;
+    border-right: none;
+    border-left: none;
+    padding: 23px 0 23px 50px;
+    position: relative;
+
+}
+.container-login form .form-group:nth-child(2) input
+{
+    color: #DC6180 !important;
+}
+
+.container-login form .form-group:before
+{
+    position: absolute;
+    content: '';
+    height: 48px;
+    width: 50px;
+    /*background: red;*/
+    margin: 0;
+    z-index: 2;
+}
+
+.container-login form .form-group:nth-child(1):before
+{
+    background-size: contain;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png") no-repeat center;
+}
+
+.container-login form .form-group:nth-child(2):before
+{
+    background-size: contain;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png") no-repeat center;
+}
+
+
+.container-login form button {
+    border-radius: 50px;
+    background: transparent;
+    padding: 10px 50px;
+    border: 2px solid #DC6180;
+    color: #DC6180;
+    text-transform: uppercase;
+    font-size: 11px;
+    transition-property: background, color;
+    transition-duration: .2s;
+    margin: auto;
+}
+.container-login form button:focus {
+    box-shadow: none;
+    outline: none;
+}
+.container-login form button:hover {
+    color: white;
+    background: #DC6180;
+    cursor: pointer;
+    transition-property: background,color;
+    transition-duration: .2s;
+    border: 2px solid #DC6180;
+}
+
+@media screen and (max-width: 500px)
+{
+ .container-login
+ {
+     width: 100%;
+ }
+}
+
+@media screen and (max-height: 700px)
+{
+    .container-login
+    {
+        margin-top: 0;
+       height: 100%;
+    }
+}
+
+.titre-profond
+{
+    font-family: Rockness;
+    text-shadow: 1px 1px rgba(255,255,255,0.1), -1px -1px rgba(0,0,0,0.5);
+    color: rgba(255,255,255,0);
+    font-size: 3rem;
+}
+
+.input-profond
+{
+    box-shadow: 1px 3px rgba(255,255,255,0.1), -1px -2px rgba(0,0,0,0.5) !important;
+    background: rgba(255,255,255,0);
+    color: rgba(255,255,255,1);
+    text-shadow: 1px 1px rgba(255,255,255,0.1), -1px -1px rgba(0,0,0,0.5);
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+/******-------> SVG CERF*/
+
+svg {
+    width: 100%;
+    height: 400px;
+}
+
+.fil0 {
+    fill: #C3936B;
+}
+
+.fil1 {
+    fill: #AB7345;
+}
+
+.fil2 {
+    fill: #D7AF91;
+}
+
+.fil3 {
+    fill: #5B5B5B;
+}
+
+.fil4 {
+    fill: #727271;
+}
+
+.fil5 {
+    fill: #ECD1BF;
+}
+
+.fil6 {
+    fill: #955B27;
+}
+
+.fil7 {
+    fill: #834B1A;
+}
+
+.fil8 {
+    fill: #5C3110;
+}
+
+.fil9 {
+    fill: #D2CC9D;
+}
+
+.fil10 {
+    fill: #E8E2AC;
+}
+
+.fil11 {
+    fill: #F6EFC8;
+}
+
+polygon {
+    opacity: 0;
+}
+polygon:nth-child(0) {
+    -webkit-animation: fade-animation 3s ease forwards 0.61s;
+    animation: fade-animation 3s ease forwards 0.61s;
+}
+polygon:nth-child(1) {
+    -webkit-animation: fade-animation 3s ease forwards 0.61s;
+    animation: fade-animation 3s ease forwards 0.61s;
+}
+polygon:nth-child(2) {
+    -webkit-animation: fade-animation 3s ease forwards 1.77s;
+    animation: fade-animation 3s ease forwards 1.77s;
+}
+polygon:nth-child(3) {
+    -webkit-animation: fade-animation 3s ease forwards 0.05s;
+    animation: fade-animation 3s ease forwards 0.05s;
+}
+polygon:nth-child(4) {
+    -webkit-animation: fade-animation 3s ease forwards 0.44s;
+    animation: fade-animation 3s ease forwards 0.44s;
+}
+polygon:nth-child(5) {
+    -webkit-animation: fade-animation 3s ease forwards 0.57s;
+    animation: fade-animation 3s ease forwards 0.57s;
+}
+polygon:nth-child(6) {
+    -webkit-animation: fade-animation 3s ease forwards 1.17s;
+    animation: fade-animation 3s ease forwards 1.17s;
+}
+polygon:nth-child(7) {
+    -webkit-animation: fade-animation 3s ease forwards 1.4s;
+    animation: fade-animation 3s ease forwards 1.4s;
+}
+polygon:nth-child(8) {
+    -webkit-animation: fade-animation 3s ease forwards 0.42s;
+    animation: fade-animation 3s ease forwards 0.42s;
+}
+polygon:nth-child(9) {
+    -webkit-animation: fade-animation 3s ease forwards 0.92s;
+    animation: fade-animation 3s ease forwards 0.92s;
+}
+polygon:nth-child(10) {
+    -webkit-animation: fade-animation 3s ease forwards 0.7s;
+    animation: fade-animation 3s ease forwards 0.7s;
+}
+polygon:nth-child(11) {
+    -webkit-animation: fade-animation 3s ease forwards 1.93s;
+    animation: fade-animation 3s ease forwards 1.93s;
+}
+polygon:nth-child(12) {
+    -webkit-animation: fade-animation 3s ease forwards 0.07s;
+    animation: fade-animation 3s ease forwards 0.07s;
+}
+polygon:nth-child(13) {
+    -webkit-animation: fade-animation 3s ease forwards 0.49s;
+    animation: fade-animation 3s ease forwards 0.49s;
+}
+polygon:nth-child(14) {
+    -webkit-animation: fade-animation 3s ease forwards 1.67s;
+    animation: fade-animation 3s ease forwards 1.67s;
+}
+polygon:nth-child(15) {
+    -webkit-animation: fade-animation 3s ease forwards 1.46s;
+    animation: fade-animation 3s ease forwards 1.46s;
+}
+polygon:nth-child(16) {
+    -webkit-animation: fade-animation 3s ease forwards 1.87s;
+    animation: fade-animation 3s ease forwards 1.87s;
+}
+polygon:nth-child(17) {
+    -webkit-animation: fade-animation 3s ease forwards 0.49s;
+    animation: fade-animation 3s ease forwards 0.49s;
+}
+polygon:nth-child(18) {
+    -webkit-animation: fade-animation 3s ease forwards 0.27s;
+    animation: fade-animation 3s ease forwards 0.27s;
+}
+polygon:nth-child(19) {
+    -webkit-animation: fade-animation 3s ease forwards 1.82s;
+    animation: fade-animation 3s ease forwards 1.82s;
+}
+polygon:nth-child(20) {
+    -webkit-animation: fade-animation 3s ease forwards 0.16s;
+    animation: fade-animation 3s ease forwards 0.16s;
+}
+polygon:nth-child(21) {
+    -webkit-animation: fade-animation 3s ease forwards 0.32s;
+    animation: fade-animation 3s ease forwards 0.32s;
+}
+polygon:nth-child(22) {
+    -webkit-animation: fade-animation 3s ease forwards 1.61s;
+    animation: fade-animation 3s ease forwards 1.61s;
+}
+polygon:nth-child(23) {
+    -webkit-animation: fade-animation 3s ease forwards 1.2s;
+    animation: fade-animation 3s ease forwards 1.2s;
+}
+polygon:nth-child(24) {
+    -webkit-animation: fade-animation 3s ease forwards 0.21s;
+    animation: fade-animation 3s ease forwards 0.21s;
+}
+polygon:nth-child(25) {
+    -webkit-animation: fade-animation 3s ease forwards 0.13s;
+    animation: fade-animation 3s ease forwards 0.13s;
+}
+polygon:nth-child(26) {
+    -webkit-animation: fade-animation 3s ease forwards 1.66s;
+    animation: fade-animation 3s ease forwards 1.66s;
+}
+polygon:nth-child(27) {
+    -webkit-animation: fade-animation 3s ease forwards 1.23s;
+    animation: fade-animation 3s ease forwards 1.23s;
+}
+polygon:nth-child(28) {
+    -webkit-animation: fade-animation 3s ease forwards 1.55s;
+    animation: fade-animation 3s ease forwards 1.55s;
+}
+polygon:nth-child(29) {
+    -webkit-animation: fade-animation 3s ease forwards 1.36s;
+    animation: fade-animation 3s ease forwards 1.36s;
+}
+polygon:nth-child(30) {
+    -webkit-animation: fade-animation 3s ease forwards 0.41s;
+    animation: fade-animation 3s ease forwards 0.41s;
+}
+polygon:nth-child(31) {
+    -webkit-animation: fade-animation 3s ease forwards 0.94s;
+    animation: fade-animation 3s ease forwards 0.94s;
+}
+polygon:nth-child(32) {
+    -webkit-animation: fade-animation 3s ease forwards 1.15s;
+    animation: fade-animation 3s ease forwards 1.15s;
+}
+polygon:nth-child(33) {
+    -webkit-animation: fade-animation 3s ease forwards 0.42s;
+    animation: fade-animation 3s ease forwards 0.42s;
+}
+polygon:nth-child(34) {
+    -webkit-animation: fade-animation 3s ease forwards 0.91s;
+    animation: fade-animation 3s ease forwards 0.91s;
+}
+polygon:nth-child(35) {
+    -webkit-animation: fade-animation 3s ease forwards 0.09s;
+    animation: fade-animation 3s ease forwards 0.09s;
+}
+polygon:nth-child(36) {
+    -webkit-animation: fade-animation 3s ease forwards 0.97s;
+    animation: fade-animation 3s ease forwards 0.97s;
+}
+polygon:nth-child(37) {
+    -webkit-animation: fade-animation 3s ease forwards 1.08s;
+    animation: fade-animation 3s ease forwards 1.08s;
+}
+polygon:nth-child(38) {
+    -webkit-animation: fade-animation 3s ease forwards 0.08s;
+    animation: fade-animation 3s ease forwards 0.08s;
+}
+polygon:nth-child(39) {
+    -webkit-animation: fade-animation 3s ease forwards 1.38s;
+    animation: fade-animation 3s ease forwards 1.38s;
+}
+polygon:nth-child(40) {
+    -webkit-animation: fade-animation 3s ease forwards 1.79s;
+    animation: fade-animation 3s ease forwards 1.79s;
+}
+polygon:nth-child(41) {
+    -webkit-animation: fade-animation 3s ease forwards 0.16s;
+    animation: fade-animation 3s ease forwards 0.16s;
+}
+polygon:nth-child(42) {
+    -webkit-animation: fade-animation 3s ease forwards 0.6s;
+    animation: fade-animation 3s ease forwards 0.6s;
+}
+polygon:nth-child(43) {
+    -webkit-animation: fade-animation 3s ease forwards 1.44s;
+    animation: fade-animation 3s ease forwards 1.44s;
+}
+polygon:nth-child(44) {
+    -webkit-animation: fade-animation 3s ease forwards 1.58s;
+    animation: fade-animation 3s ease forwards 1.58s;
+}
+polygon:nth-child(45) {
+    -webkit-animation: fade-animation 3s ease forwards 1.71s;
+    animation: fade-animation 3s ease forwards 1.71s;
+}
+polygon:nth-child(46) {
+    -webkit-animation: fade-animation 3s ease forwards 0.87s;
+    animation: fade-animation 3s ease forwards 0.87s;
+}
+polygon:nth-child(47) {
+    -webkit-animation: fade-animation 3s ease forwards 0.7s;
+    animation: fade-animation 3s ease forwards 0.7s;
+}
+polygon:nth-child(48) {
+    -webkit-animation: fade-animation 3s ease forwards 0.83s;
+    animation: fade-animation 3s ease forwards 0.83s;
+}
+polygon:nth-child(49) {
+    -webkit-animation: fade-animation 3s ease forwards 1.07s;
+    animation: fade-animation 3s ease forwards 1.07s;
+}
+polygon:nth-child(50) {
+    -webkit-animation: fade-animation 3s ease forwards 0.02s;
+    animation: fade-animation 3s ease forwards 0.02s;
+}
+polygon:nth-child(51) {
+    -webkit-animation: fade-animation 3s ease forwards 0.23s;
+    animation: fade-animation 3s ease forwards 0.23s;
+}
+polygon:nth-child(52) {
+    -webkit-animation: fade-animation 3s ease forwards 0.58s;
+    animation: fade-animation 3s ease forwards 0.58s;
+}
+polygon:nth-child(53) {
+    -webkit-animation: fade-animation 3s ease forwards 1.54s;
+    animation: fade-animation 3s ease forwards 1.54s;
+}
+polygon:nth-child(54) {
+    -webkit-animation: fade-animation 3s ease forwards 0.17s;
+    animation: fade-animation 3s ease forwards 0.17s;
+}
+polygon:nth-child(55) {
+    -webkit-animation: fade-animation 3s ease forwards 0.11s;
+    animation: fade-animation 3s ease forwards 0.11s;
+}
+polygon:nth-child(56) {
+    -webkit-animation: fade-animation 3s ease forwards 1.47s;
+    animation: fade-animation 3s ease forwards 1.47s;
+}
+polygon:nth-child(57) {
+    -webkit-animation: fade-animation 3s ease forwards 1.84s;
+    animation: fade-animation 3s ease forwards 1.84s;
+}
+polygon:nth-child(58) {
+    -webkit-animation: fade-animation 3s ease forwards 1.5s;
+    animation: fade-animation 3s ease forwards 1.5s;
+}
+polygon:nth-child(59) {
+    -webkit-animation: fade-animation 3s ease forwards 0.79s;
+    animation: fade-animation 3s ease forwards 0.79s;
+}
+polygon:nth-child(60) {
+    -webkit-animation: fade-animation 3s ease forwards 0.33s;
+    animation: fade-animation 3s ease forwards 0.33s;
+}
+polygon:nth-child(61) {
+    -webkit-animation: fade-animation 3s ease forwards 1.88s;
+    animation: fade-animation 3s ease forwards 1.88s;
+}
+polygon:nth-child(62) {
+    -webkit-animation: fade-animation 3s ease forwards 1.61s;
+    animation: fade-animation 3s ease forwards 1.61s;
+}
+polygon:nth-child(63) {
+    -webkit-animation: fade-animation 3s ease forwards 0.53s;
+    animation: fade-animation 3s ease forwards 0.53s;
+}
+polygon:nth-child(64) {
+    -webkit-animation: fade-animation 3s ease forwards 1.4s;
+    animation: fade-animation 3s ease forwards 1.4s;
+}
+polygon:nth-child(65) {
+    -webkit-animation: fade-animation 3s ease forwards 1.05s;
+    animation: fade-animation 3s ease forwards 1.05s;
+}
+polygon:nth-child(66) {
+    -webkit-animation: fade-animation 3s ease forwards 0.56s;
+    animation: fade-animation 3s ease forwards 0.56s;
+}
+polygon:nth-child(67) {
+    -webkit-animation: fade-animation 3s ease forwards 0.87s;
+    animation: fade-animation 3s ease forwards 0.87s;
+}
+polygon:nth-child(68) {
+    -webkit-animation: fade-animation 3s ease forwards 1.71s;
+    animation: fade-animation 3s ease forwards 1.71s;
+}
+
+@-webkit-keyframes fade-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

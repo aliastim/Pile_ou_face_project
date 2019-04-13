@@ -16,8 +16,20 @@ ini_set('display_errors', 1);   // Idem
 
 require __DIR__ . "/bootstrap.php";
 
+if (isset($_GET['error']))
+{
+    $error= "erreur";
+}
+
+if (isset($_GET['void']))
+{
+    $void= "void";
+}
 
     echo $twig->render('connect.html.twig', [
         'title' => 'Connexion',
+        'erreur' => isset($error),
+        'void' => isset($void),
+
     ]);
 

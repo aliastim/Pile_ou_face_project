@@ -8,11 +8,11 @@
        <!--<div class="container" style="background: white; margin-top: 20px; margin-bottom: 20px;">-->
            <div class="row">
                <div class="col-12">
-                   <h2 class="title-important-souligne" style="margin-left: 20px;">Notre Galerie photos</h2>
 
-                       <button class="btn" data-toggle="modal" data-target="#ajout_image">Ajouter une image</button>
-                       <p>delete length.id - 14 OU ne pas mettre une limite de 15 et laisser le choix du nombre (suppression manuelle de la 16ème)<br>
-                       X = modifier description image | Supprimer image | modifier titre image | modifier lieu</p>
+                       <h2 class="title-important-souligne" style="margin-left: 20px;">Notre Galerie photos</h2>
+                   {% if isConnected|default(false)  %}
+                       <a class="btn-galerie" data-toggle="modal" data-target="#ajout_image"></a>
+
 
                    <div class="modal fade" id="ajout_image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                        <div class="modal-dialog modal-dialog-centered" role="document">
@@ -22,10 +22,10 @@
                                    <p>Ajouter une image</p>
                                        <label for="mon_fichier">Télécharger mon image :</label><br />
                                        <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                       <input type="file" name="mon_fichier" id="mon_fichier" /><br />
+                                       <input type="file" name="mon_fichier" id="mon_fichier" required/><br />
 
                                        <label for="titre">Titre de mon image :</label><br />
-                                       <input type="text" name="titre" value="" id="titre" /><br />
+                                       <input type="text" name="titre" value="" id="titre" required/><br />
 
                                        <label for="description">Description de l'image (facultatif) :</label><br />
                                        <textarea name="description" id="description" maxlength="255"></textarea><br />
@@ -39,6 +39,7 @@
                        </div>
                    </div>
 
+                   {% endif %}
 
 
                    <div class="grid">
@@ -46,7 +47,7 @@
 
                        {% for image in images %}
                            <div class="grid-item {{image.image_size}}">
-                               <div class=" round" data-toggle="modal" data-target="#exampleModal{{image.id}}-Admin"></div>
+                               {% if isConnected|default(false)  %}<div class=" round" data-toggle="modal" data-target="#exampleModal{{image.id}}-Admin"></div>{% endif %}
                                <div class="select-image" data-toggle="modal" data-target="#exampleModal{{image.id}}"></div>
                                <img src="{{ image.file }}" />
                            </div>
@@ -62,10 +63,11 @@
                                </div>
                            </div>
 
+                           {% if isConnected|default(false)  %}
                            <div class="modal fade" id="exampleModal{{image.id}}-Admin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                <div class="modal-dialog modal-dialog-centered" role="document">
                                    <div class="modal-content">
-                                       <form>
+
                                        <div class="modal-header">
                                            <h5 class="modal-title" id="exampleModalLabel">N°{{image.id}}</h5>
                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -73,25 +75,30 @@
                                            </button>
                                        </div>
                                        <div class="modal-body text-center">
+                                           <form method="post" action="../edit_image.php">
+                                                   <input type="hidden" name="id_image" value="{{ image.id }}">
+                                                   <label for="Titre_image">Titre de l'image</label>
+                                                   <input type="text" id="Titre_image" name="Titre_image" value="{{ image.name }}" required style="width: 100%;">
 
-                                               <label for="Titre_image">Titre de l'image</label>
-                                               <input type="text" id="Titre_image" value="Titre de mon image" style="width: 100%;">
+                                                   <label for="Description">Description</label>
+                                                   <textarea id="Description" name="Description" style="width: 100%;">{{ image.description }}</textarea>
 
-                                               <label for="Description">Description</label>
-                                               <textarea id="Description" style="width: 100%;">Description de mon image</textarea>
-
-                                               <label for="Lieu">Lieu</label>
-                                               <textarea id="Lieu" style="width: 100%;">Lieu où a été prise ma photo</textarea>
-
+                                                   <label for="Lieu">Lieu</label>
+                                                   <textarea id="Lieu" name="Lieu" style="width: 100%;">{{ image.lieu }}</textarea>
+                                                   <input class="btn btn-warning" type="submit" value="Modifier">
+                                            </form>
                                        </div>
                                        <div class="modal-footer">
-                                           <input class="btn btn-warning" type="submit" value="Modifier">
-                                           <input class="btn btn-danger" type="submit" value="Supprimer image">
+                                           <form method="post" action="../delete_image.php">
+                                                   <input type="hidden" name="id_image" value="{{ image.id }}">
+                                                   <input class="btn btn-danger" type="submit" value="Supprimer l'image">
+                                           </form>
                                        </div>
-                                       </form>
+
                                    </div>
                                </div>
                            </div>
+                           {% endif %}
                        {% endfor %}
 
 
@@ -101,25 +108,5 @@
         </div>
    </div>
 
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 {% endblock %}
