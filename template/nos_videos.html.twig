@@ -45,48 +45,148 @@
                 </div>
             {% endif %}
             <div class="row text-center justify-content-center">
+                {% for video in videos_minifilms %}
                 <div class="col-lg-4">
-                    <div class="videos-modif"></div>
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="{{ video.file }}" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {% if isConnected|default(false)  %}
+                        <div class="videos-modif" data-toggle="modal" data-target="#VideoModal{{ video.id }}"></div>
+
+                        <div class="modal fade" id="VideoModal{{ video.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+
+                                    <div class="modal-body text-center">
+                                        <form method="post" action="../edit_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <strong>Vidéo n°{{ video.id }}<br></strong>
+                                            <hr>
+                                            <label for="Titre_video">Titre de la vidéo</label>
+                                            <input type="text" id="Titre_video" name="Titre_video" value="{{ video.name }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">
+
+                                            <label for="Lien_video">Lien de la vidéo (iFrame)</label>
+                                            <input type="text" id="Lien_video" name="Lien_video" value="{{ video.file }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px; color: darkorange; font-weight: bold;">
+
+                                            <label for="Description">Description</label>
+                                            <textarea id="Description" name="Description" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.description }}</textarea>
+
+                                            <label for="Lieu">Lieu</label>
+                                            <textarea id="Lieu" name="Lieu" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.lieu }}</textarea>
+                                            <input class="btn btn-warning" type="submit" value="Modifier">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form method="post" action="../delete_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <input class="btn btn-danger" type="submit" value="Supprimer la vidéo">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                {% endfor %}
                 <div class="col-12 text-right" style="margin-top: -30px;">
                         <a class=" text-voir-plus" href="#" target="_blank">Voir plus...</a>
                 </div>
             </div>
 
+
             <h2 class="title-important-souligne" style="margin-top: -30px;">Freestyles</h2>
             <div class="row text-center justify-content-center">
+                {% for video in videos_freestyles %}
                 <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/CbnT3hjIgAI" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="{{ video.file }}" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {% if isConnected|default(false)  %}
+                        <div class="videos-modif" data-toggle="modal" data-target="#VideoModal{{ video.id }}"></div>
+
+                        <div class="modal fade" id="VideoModal{{ video.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+
+                                    <div class="modal-body text-center">
+                                        <form method="post" action="../edit_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <strong>Vidéo n°{{ video.id }}<br></strong>
+                                            <hr>
+                                            <label for="Titre_video">Titre de la vidéo</label>
+                                            <input type="text" id="Titre_video" name="Titre_video" value="{{ video.name }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">
+
+                                            <label for="Lien_video">Lien de la vidéo (iFrame)</label>
+                                            <input type="text" id="Lien_video" name="Lien_video" value="{{ video.file }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px; color: darkorange; font-weight: bold;">
+
+                                            <label for="Description">Description</label>
+                                            <textarea id="Description" name="Description" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.description }}</textarea>
+
+                                            <label for="Lieu">Lieu</label>
+                                            <textarea id="Lieu" name="Lieu" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.lieu }}</textarea>
+                                            <input class="btn btn-warning" type="submit" value="Modifier">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form method="post" action="../delete_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <input class="btn btn-danger" type="submit" value="Supprimer la vidéo">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+
                 </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                {% endfor %}
                 <div class="col-12 text-right" style="margin-top: -30px;">
-                    <a class=" text-voir-plus" href="https://www.youtube.com/playlist?list=PLl99aQ-DAzW2BMCODAjN3sD1-yhft0H3v" target="_blank">Voir plus...</a>
+                    <a class=" text-voir-plus" href="https://www.youtube.com/channel/UCfWmjCbQp5ngqIWx-78GaRg/playlists" target="_blank">Voir plus...</a>
                 </div>
             </div>
 
             <h2 class="title-important-souligne" style="margin-top: -30px;">Challenges</h2>
             <div class="row text-center justify-content-center">
+                {% for video in videos_challenges %}
                 <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="{{ video.file }}" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    {% if isConnected|default(false)  %}
+                        <div class="videos-modif" data-toggle="modal" data-target="#VideoModal{{ video.id }}"></div>
+
+                        <div class="modal fade" id="VideoModal{{ video.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+
+                                    <div class="modal-body text-center">
+                                        <form method="post" action="../edit_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <strong>Vidéo n°{{ video.id }}<br></strong>
+                                            <hr>
+                                            <label for="Titre_video">Titre de la vidéo</label>
+                                            <input type="text" id="Titre_video" name="Titre_video" value="{{ video.name }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">
+
+                                            <label for="Lien_video">Lien de la vidéo (iFrame)</label>
+                                            <input type="text" id="Lien_video" name="Lien_video" value="{{ video.file }}" placeholder="facultatif" style="width: 100%; margin-bottom: 10px; color: darkorange; font-weight: bold;">
+
+                                            <label for="Description">Description</label>
+                                            <textarea id="Description" name="Description" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.description }}</textarea>
+
+                                            <label for="Lieu">Lieu</label>
+                                            <textarea id="Lieu" name="Lieu" placeholder="facultatif" style="width: 100%; margin-bottom: 10px;">{{ video.lieu }}</textarea>
+                                            <input class="btn btn-warning" type="submit" value="Modifier">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form method="post" action="../delete_video.php">
+                                            <input type="hidden" name="id_video" value="{{ video.id }}">
+                                            <input class="btn btn-danger" type="submit" value="Supprimer la vidéo">
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="col-lg-4">
-                    <iframe src="https://www.youtube.com/embed/Y-JQ-RCyPpQ" class="videos-video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                {% endfor %}
                 <div class="col-12 text-right" style="margin-top: -30px;">
                     <a class=" text-voir-plus" href="#" target="_blank">Voir plus...</a>
                 </div>

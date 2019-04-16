@@ -677,13 +677,13 @@ body
     height: 40px;
     width: 40px;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     right: 0;
     top: 0;
     margin-top: -15px;
 }
 
-.videos-modif:hover:before
+.videos-modif:hover:after
 {
     background: url("../ressources/Icones_2/error.png") no-repeat center;
     background-size: contain;
@@ -801,6 +801,50 @@ body
     }
 }
 
+.icones-fb-cv
+{
+    height: 40px;
+    width: 40px;
+    background: url("../ressources/Icones_3/social-facebook-circular-button copie2.png") no-repeat center;
+    background-size: contain;
+    margin: auto;
+}
+
+.icones-insta-cv
+{
+    height: 40px;
+    width: 40px;
+    background: url("../ressources/Icones_3/insta_copie2.png") no-repeat center;
+    background-size: contain;
+    margin: auto;
+}
+
+.icones-youtube-cv
+{
+    height: 40px;
+    width: 40px;
+    background: url("../ressources/Icones_3/social-youtube-circular-button.png") no-repeat center;
+    background-size: contain;
+    margin: auto;
+}
+
+.icones-fb-cv:hover
+{
+    background: url("../ressources/Icones_3/facebook-logo-button copie2.png") no-repeat center;
+    background-size: contain;
+}
+
+.icones-insta-cv:hover
+{
+    background: url("../ressources/Icones_3/insta(1)_copie2.png") no-repeat center;
+    background-size: contain;
+}
+
+.icones-youtube-cv:hover
+{
+    background: url("../ressources/Icones_3/youtube-logotype.png") no-repeat center;
+    background-size: contain;
+}
 /***********************************FIN IYA et MEL***************************************/
 /***************************************CONTACT******************************************/
 
