@@ -30,7 +30,7 @@ class Videos
     /**
      * @var string
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     private $name;
 
@@ -72,10 +72,10 @@ class Videos
 
     /**
      * @param int $id
-     *@return php
+     *@return Videos
      *
      */
-    public function setId($id): php
+    public function setId($id): Videos
     {
         $this->id = $id;
 
@@ -92,9 +92,9 @@ class Videos
 
     /**
      * @param string $name
-     *@return php
+     *@return Videos
      */
-    public function setName($name): php
+    public function setName($name): Videos
     {
         $this->name = $name;
 
@@ -111,9 +111,9 @@ class Videos
 
     /**
      * @param string $file
-     *@return php
+     *@return Videos
      */
-    public function setFile($file): php
+    public function setFile($file): Videos
     {
         $this->file = $file;
 
@@ -130,9 +130,9 @@ class Videos
 
     /**
      * @param string $description
-     *@return php
+     *@return Videos
      */
-    public function setDescription($description): php
+    public function setDescription($description): Videos
     {
         $this->description = $description;
 
@@ -149,9 +149,9 @@ class Videos
 
     /**
      * @param string $lieu
-     *@return php
+     *@return Videos
      */
-    public function setLieu($lieu): php
+    public function setLieu($lieu): Videos
     {
         $this->lieu = $lieu;
 
@@ -168,9 +168,9 @@ class Videos
 
     /**
      * @param string $categorie
-     *@return php
+     *@return Videos
      */
-    public function setCategorie($categorie): php
+    public function setCategorie($categorie): Videos
     {
         $this->categorie = $categorie;
 
