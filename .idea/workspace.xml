@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66a557d2-03e8-4df0-83de-618452745bab" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entity/Videos.php" beforeDir="false" afterPath="$PROJECT_DIR$/Entity/Videos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/connect.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/connect.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/contact.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/galerie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/galerie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/homepage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/iya_duclos_villain.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/iya_duclos_villain.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/melanie_rolland.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/melanie_rolland.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template/nos_videos.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/template/nos_videos.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,91 +27,83 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/homepage.html.twig">
+        <entry file="file://$PROJECT_DIR$/template/contact.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state relative-caret-position="390">
+              <caret line="26" column="155" selection-start-line="26" selection-start-column="155" selection-end-line="26" selection-end-column="155" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/nos_videos.html.twig">
+        <entry file="file://$PROJECT_DIR$/template/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="201" column="77" selection-start-line="201" selection-start-column="77" selection-end-line="201" selection-end-column="88" />
+            <state relative-caret-position="356">
+              <caret line="60" column="293" selection-start-line="60" selection-start-column="293" selection-end-line="60" selection-end-column="293" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_video.php">
+        <entry file="file://$PROJECT_DIR$/template/404.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="28" />
+            <state relative-caret-position="165">
+              <caret line="11" column="125" selection-start-line="11" selection-start-column="125" selection-end-line="11" selection-end-column="125" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/galerie.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/melanie_rolland.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="40" selection-end-column="24" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="668">
+              <caret line="935" column="1" selection-start-line="935" selection-start-column="1" selection-end-line="935" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/delete_video.php">
+        <entry file="file://$PROJECT_DIR$/template/iya_duclos_villain.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+            <state relative-caret-position="345">
+              <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+              <folding>
+                <element signature="e#2050#2078#0#HTML" expanded="true" />
+                <element signature="e#2213#2237#0#HTML" expanded="true" />
+                <element signature="e#2672#2696#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/delete_image.php">
+        <entry file="file://$PROJECT_DIR$/template/connect.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" selection-start-line="19" selection-end-line="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit_image.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="54" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/upload_video.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nos_videos.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/galerie.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Entity/Images_accueil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+            <state relative-caret-position="1935">
+              <caret line="129" column="14" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -120,7 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ceil</find>
       <find>article</find>
       <find>menu</find>
       <find>jus</find>
@@ -150,6 +148,7 @@
       <find>Voir plus</find>
       <find>descri</find>
       <find>php</find>
+      <find>grid-item</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -161,10 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin_users_list.php" />
-        <option value="$PROJECT_DIR$/admin_articles_new.php" />
-        <option value="$PROJECT_DIR$/create_articles.php" />
-        <option value="$PROJECT_DIR$/articles.php" />
         <option value="$PROJECT_DIR$/registration.html.twig" />
         <option value="$PROJECT_DIR$/registration.php" />
         <option value="$PROJECT_DIR$/template/registration.html.twig" />
@@ -189,29 +184,33 @@
         <option value="$PROJECT_DIR$/delete_image.php" />
         <option value="$PROJECT_DIR$/Entity/User.php" />
         <option value="$PROJECT_DIR$/admin_users_new.php" />
-        <option value="$PROJECT_DIR$/template/connect.html.twig" />
         <option value="$PROJECT_DIR$/login.php" />
-        <option value="$PROJECT_DIR$/template/base.html.twig" />
         <option value="$PROJECT_DIR$/template/admin_users_list.html.twig" />
         <option value="$PROJECT_DIR$/template/admin_users_new.html.twig" />
         <option value="$PROJECT_DIR$/template/admin_users_edit.html.twig" />
         <option value="$PROJECT_DIR$/connect.php" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/template/homepage.html.twig" />
-        <option value="$PROJECT_DIR$/template/galerie.html.twig" />
-        <option value="$PROJECT_DIR$/template/melanie_rolland.html.twig" />
-        <option value="$PROJECT_DIR$/template/iya_duclos_villain.html.twig" />
-        <option value="$PROJECT_DIR$/template/contact.html.twig" />
         <option value="$PROJECT_DIR$/Repository/VideosRepository.php" />
         <option value="$PROJECT_DIR$/Entity/Videos" />
         <option value="$PROJECT_DIR$/nos_videos.php" />
         <option value="$PROJECT_DIR$/Entity/Videos.php" />
         <option value="$PROJECT_DIR$/upload_video.php" />
-        <option value="$PROJECT_DIR$/src/style.css" />
-        <option value="$PROJECT_DIR$/template/nos_videos.html.twig" />
         <option value="$PROJECT_DIR$/edit_video.php" />
         <option value="$PROJECT_DIR$/delete_video.php" />
+        <option value="$PROJECT_DIR$/404.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/template/contact.html.twig" />
+        <option value="$PROJECT_DIR$/template/nos_videos.html.twig" />
+        <option value="$PROJECT_DIR$/template/homepage.html.twig" />
+        <option value="$PROJECT_DIR$/template/connect.html.twig" />
+        <option value="$PROJECT_DIR$/template/404.html.twig" />
+        <option value="$PROJECT_DIR$/template/galerie.html.twig" />
+        <option value="$PROJECT_DIR$/template/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/style.css" />
+        <option value="$PROJECT_DIR$/template/melanie_rolland.html.twig" />
+        <option value="$PROJECT_DIR$/template/iya_duclos_villain.html.twig" />
       </list>
     </option>
   </component>
@@ -248,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -291,6 +289,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,18 +356,22 @@
       <workItem from="1555426283789" duration="1414000" />
       <workItem from="1555434038039" duration="3074000" />
       <workItem from="1555486731971" duration="3493000" />
-      <workItem from="1555592326784" duration="2203000" />
+      <workItem from="1555592326784" duration="5978000" />
+      <workItem from="1555663936894" duration="1521000" />
+      <workItem from="1555675434651" duration="307000" />
+      <workItem from="1555750201091" duration="846000" />
+      <workItem from="1555857945950" duration="1551000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143506000" />
+    <option name="totallyTimeSpent" value="151506000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3662375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3869814" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -393,40 +396,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ressources/logo2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iya_duclos_villain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="34" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/melanie_rolland.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contact.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -469,29 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/registration.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/connect.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#401#448#0#HTML" expanded="true" />
-            <element signature="e#7151#7177#0#HTML" expanded="true" />
-            <element signature="e#7583#7608#0#HTML" expanded="true" />
-            <element signature="e#7758#7783#0#HTML" expanded="true" />
-            <element signature="e#7800#7862#0#HTML" expanded="true" />
-            <element signature="e#8080#8105#0#HTML" expanded="true" />
-            <element signature="e#8122#8184#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -591,27 +537,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/bin/doctrine.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/melanie_rolland.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="168" selection-start-line="45" selection-start-column="168" selection-end-line="45" selection-end-column="168" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/iya_duclos_villain.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="96" selection-start-line="26" selection-start-column="96" selection-end-line="26" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/parameters.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -645,13 +570,6 @@
         <state relative-caret-position="-753" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/galerie.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/doctrine/orm/lib/Doctrine/ORM/EntityRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -680,27 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="96" column="26" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/contact.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="98" selection-start-line="45" selection-start-column="90" selection-end-line="45" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nos_videos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/galerie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -712,13 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/homepage.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -736,17 +626,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/nos_videos.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="201" column="77" selection-start-line="201" selection-start-column="77" selection-end-line="201" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/delete_image.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="19" selection-start-line="19" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/delete_video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/melanie_rolland.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="40" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -757,10 +654,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/delete_video.php">
+    <entry file="file://$PROJECT_DIR$/404.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="77" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
+        <state relative-caret-position="180">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nos_videos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="54" column="46" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/registration.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/404.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="125" selection-start-line="11" selection-start-column="125" selection-end-line="11" selection-end-column="125" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/galerie.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/connect.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="129" column="14" selection-start-line="129" selection-start-column="14" selection-end-line="129" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="60" column="293" selection-start-line="60" selection-start-column="293" selection-end-line="60" selection-end-column="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="54" selection-start-line="54" selection-end-line="61" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/nos_videos.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="233" column="148" selection-start-line="233" selection-start-column="148" selection-end-line="233" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="155" selection-start-line="26" selection-start-column="155" selection-end-line="26" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="668">
+          <caret line="935" column="1" selection-start-line="935" selection-start-column="1" selection-end-line="935" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/melanie_rolland.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/iya_duclos_villain.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <element signature="e#2050#2078#0#HTML" expanded="true" />
+            <element signature="e#2213#2237#0#HTML" expanded="true" />
+            <element signature="e#2672#2696#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

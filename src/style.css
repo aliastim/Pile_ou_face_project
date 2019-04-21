@@ -156,6 +156,15 @@ body
 .grid-item {
     float: left;
     border: 20px solid white;
+    /*border: 20px solid rgba(255,255,255,0.6);*/
+    transition: ease 1s;
+}
+
+.grid-item:hover {
+
+    border: 10px solid white;
+    cursor: pointer;
+
 }
 
 .grid-item img {
@@ -224,13 +233,14 @@ body
     z-index: 1;
 }
 
+/*
 .select-image:hover
 {
     background: blue;
     opacity: 0.3;
     cursor: pointer;
 }
-
+*/
 /*
 .select-image:hover:before
 {
@@ -853,6 +863,78 @@ body
     background: url("../ressources/Icones_3/youtube-logotype.png") no-repeat center;
     background-size: contain;
 }
+
+
+.cv-download-button
+{
+    color: black;
+    background:transparent;
+    border-width:3px;
+    border-style: solid;
+    border-color: black;
+    position:relative;
+    display:inline-block;
+    padding:0.5em 9em;
+    transition:all 0.3s ease-in-out;
+    text-align:center;
+    font-family:"Helvetica Neue";
+    font-weight:bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 50px 1em;
+}
+
+.cv-download-button:before, .cv-download-button:after
+{
+    content:'';
+    display:block;
+    position:absolute;
+    border-color: black;
+    box-sizing:border-box;
+    border-style:solid;
+    width:1.5em;
+    height:1.5em;
+    transition:all 0.3s ease-in-out;
+}
+
+.cv-download-button:before
+{
+    top:-10px;
+    left:-10px;
+    border-width:3px 0 0 3px;
+    z-index:2;
+}
+
+.cv-download-button:after
+{
+    bottom:-10px;
+    right:-10px;
+    border-width:0 3px 3px 0;
+}
+
+.cv-download-button:hover:before, .cv-download-button:hover:after
+{
+    width:calc(100% + 20px);
+    height:calc(100% + 20px);
+    border-color:#96e8da;
+}
+
+.cv-download-button:hover
+{
+    color:white;
+    background-color: #96e8da;
+    border-color:#fff;
+}
+
+
+@media screen and (max-width: 520px)
+{
+    .cv-download-button
+    {
+        padding:0.5em 3em;
+    }
+}
+
 /***********************************FIN IYA et MEL***************************************/
 /***************************************CONTACT******************************************/
 

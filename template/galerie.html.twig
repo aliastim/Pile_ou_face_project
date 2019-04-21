@@ -3,8 +3,9 @@
 {% block main %}
 
 
-   <div class="section" style="background: white;">
-       <div style="max-width: 90%; margin: auto;">
+   <div class="section" style="/*background: white; */background: linear-gradient(to bottom, white 50%, #424242 100%);">
+       <!--<div style="max-width: 90%; margin: auto; background: white;">-->
+       <div class="container" style="margin: auto; background: white;">
        <!--<div class="container" style="background: white; margin-top: 20px; margin-bottom: 20px;">-->
            <div class="row">
                <div class="col-12">
@@ -17,22 +18,23 @@
                    <div class="modal fade" id="ajout_image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                        <div class="modal-dialog modal-dialog-centered" role="document">
                            <div class="modal-content">
-                               <div class="modal-body">
+                               <div class="modal-body text-center">
                                    <form method="post" action="../upload.php" enctype="multipart/form-data">
-                                   <p>Ajouter une image</p>
+                                       <strong>Ajouter une image</strong>
+                                       <hr>
                                        <label for="mon_fichier">Télécharger mon image :</label><br />
                                        <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                                       <input type="file" name="mon_fichier" id="mon_fichier" required/><br />
+                                       <input type="file" name="mon_fichier" id="mon_fichier" required style="width: 100%; margin-bottom: 10px; cursor: pointer;" class="btn btn-primary"/><br />
 
                                        <label for="titre">Titre de mon image :</label><br />
-                                       <input type="text" name="titre" value="" id="titre" required/><br />
+                                       <input type="text" name="titre" value="" id="titre" required style="width: 100%; margin-bottom: 10px;"/><br />
 
                                        <label for="description">Description de l'image (facultatif) :</label><br />
-                                       <textarea name="description" id="description" maxlength="255"></textarea><br />
+                                       <textarea name="description" id="description" maxlength="255" placeholder="Facultatif" style="width: 100%; margin-bottom: 10px;"></textarea><br />
 
                                        <label for="lieu">Où a été prise l'image ? (facultatif) :</label><br />
-                                       <input type="text" name="lieu" value="" id="lieu"/><br />
-                                       <input type="submit" name="submit" value="Envoyer" />
+                                       <input type="text" name="lieu" value="" id="lieu" placeholder="Facultatif" style="width: 100%; margin-bottom: 10px;"/><br />
+                                       <input type="submit" name="submit" value="Envoyer" class="btn btn-success"/>
                                    </form>
                                </div>
                            </div>
@@ -78,13 +80,13 @@
                                            <form method="post" action="../edit_image.php">
                                                    <input type="hidden" name="id_image" value="{{ image.id }}">
                                                    <label for="Titre_image">Titre de l'image</label>
-                                                   <input type="text" id="Titre_image" name="Titre_image" value="{{ image.name }}" required style="width: 100%;">
+                                                   <input type="text" id="Titre_image" name="Titre_image" value="{{ image.name }}" required style="width: 100%; margin-bottom: 10px;">
 
                                                    <label for="Description">Description</label>
-                                                   <textarea id="Description" name="Description" style="width: 100%;">{{ image.description }}</textarea>
+                                                   <textarea id="Description" name="Description" placeholder="Facultatif" style="width: 100%; margin-bottom: 10px;">{{ image.description }}</textarea>
 
                                                    <label for="Lieu">Lieu</label>
-                                                   <textarea id="Lieu" name="Lieu" style="width: 100%;">{{ image.lieu }}</textarea>
+                                                   <textarea id="Lieu" name="Lieu" placeholder="Facultatif" style="width: 100%; margin-bottom: 10px;">{{ image.lieu }}</textarea>
                                                    <input class="btn btn-warning" type="submit" value="Modifier">
                                             </form>
                                        </div>
@@ -107,6 +109,18 @@
            </div>
         </div>
    </div>
+
+    <!--______________________ Footer ______________________-->
+
+    <nav class="navbar d-flex nav-foot" style="z-index: 2; background: #424242 !important; padding-top: 30px;">
+        <div class="mr-auto"><p class="accueil-footer-texte">©PileouFaceProject | <a class="navbar-brand" data-toggle="modal" data-target="#mentionslegales" href="#">Mention légales</a></p></div>
+        <div class="row">
+            <a href="https://www.instagram.com/pileoufaceproject/" target="_blank"><div class="accueil-icone-insta"></div> </a>
+            <a href="https://www.facebook.com/pileoufaceproject/" target="_blank"><div class="accueil-icone-facebook"></div> </a>
+            <a href="https://www.youtube.com/channel/UCfWmjCbQp5ngqIWx-78GaRg" target="_blank"><div class="accueil-icone-video"></div> </a>
+        </div>
+    </nav>
+
 
 
 {% endblock %}
