@@ -29,7 +29,7 @@ if (isset($_POST['image_size']))
 }
 
 
-$maxsize = 10000000;
+$maxsize = 100000000000000;
 $extensions_valides = array( 'jpg' , 'jpeg' , 'gif' , 'png', 'bmp' );
 if (isset($titledoc) && !empty($titledoc) && isset($_FILES['mon_fichier']) && !empty($_FILES['mon_fichier']))
 {
@@ -84,10 +84,14 @@ if (isset($titledoc) && !empty($titledoc) && isset($_FILES['mon_fichier']) && !e
             } else
             {
                 $erreur = "Extension incorrecte";
+                echo ("le fichier sélectionné n'est pas une image.<br> <B>RAPPEL : Les extensions autorisées sont .jpg, .jpeg, .bmp, .png ou .gif</B>");
+                echo ("<br><br>");
+                echo ("⚠️ Vous allez être redirigé dans quelques secondes...");
+                header('refresh:5;url=galerie.php');
             }
 
         }
-    }
+    } echo ($_FILES['mon_fichier']['error'] );
 
 } else
 {

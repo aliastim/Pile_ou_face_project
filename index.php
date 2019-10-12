@@ -12,7 +12,7 @@ if (isset($_SESSION['isConnected']))
 {
     $session = strval($_SESSION['firstname']);
     echo $twig->render('homepage.html.twig', [
-        'title' => 'Accueil',
+        'title' => 'Pile ou Face / Dance duo - French feminine touch',
         'isConnected' => $_SESSION['isConnected'],
         'session' => $session,
 
@@ -20,7 +20,7 @@ if (isset($_SESSION['isConnected']))
 } else
 {
     echo $twig->render('homepage.html.twig', [
-        'title' => 'Accueil',
+        'title' => 'Pile ou Face / Dance duo - French feminine touch',
         'isConnected' => isset($_SESSION['isConnected']),
     ]);
 

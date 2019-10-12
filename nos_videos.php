@@ -50,7 +50,7 @@ $videos_minifilms = $repo->findBy(
 );
 
 echo $twig->render('nos_videos.html.twig', [
-    'title' => 'Nos vidéos',
+    'title' => 'Pile ou face project - Vidéos (Clips/Challenges/Freestyles)',
     'videos_freestyles' => $videos_freestyles,
     'videos_challenges' => $videos_challenges,
     'videos_minifilms' => $videos_minifilms,

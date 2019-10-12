@@ -10,7 +10,7 @@
            <div class="row">
                <div class="col-12">
 
-                       <h2 class="title-important-souligne" style="margin-left: 20px;">Notre Galerie photos</h2>
+                       <h2 class="title-important-souligne" style="margin-left: 20px;">Notre Galerie photo</h2>
                    {% if isConnected|default(false)  %}
                        <a class="btn-galerie" data-toggle="modal" data-target="#ajout_image"></a>
 
@@ -23,7 +23,7 @@
                                        <strong>Ajouter une image</strong>
                                        <hr>
                                        <label for="mon_fichier">Télécharger mon image :</label><br />
-                                       <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                                       <input type="hidden" name="MAX_FILE_SIZE" value="100000000000000" />
                                        <input type="file" name="mon_fichier" id="mon_fichier" required style="width: 100%; margin-bottom: 10px; cursor: pointer;" class="btn btn-primary"/><br />
 
                                        <label for="titre">Titre de mon image :</label><br />

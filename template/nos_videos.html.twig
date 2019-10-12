@@ -3,6 +3,7 @@
 {% block main %}
 
     <div class="masthead">
+        <div class="video-overlay"></div>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12 text-center">
@@ -16,7 +17,7 @@
     <div class="section" style="width: 100%; /*background: white;*/background: linear-gradient(to bottom, white 50%, #424242 100%); padding-bottom: 50px; padding-bottom: 50px;">
 
         <div class="container" style="position: relative; background: rgba(255,255,255,0.6);">
-            <h2 class="title-important-souligne">Grosses vidéos</h2>
+            <h2 class="title-important-souligne">Clips</h2>
             {% if isConnected|default(false)  %}
                 <a class="btn-video" data-toggle="modal" data-target="#ajout_video" ></a>
 
@@ -33,7 +34,7 @@
                                     <label for="categorie">Choisir la catégorie</label>
                                     <select class="custom-select" id="categorie" name="categorie" style="width: 100%; margin-bottom: 10px;" required>
                                         <option selected>Choisir...</option>
-                                        <option value="mini-films">Mini-films</option>
+                                        <option value="mini-films">Clips</option>
                                         <option value="freestyles">Freestyles</option>
                                         <option value="challenges">Challenges</option>
                                     </select>
@@ -79,7 +80,7 @@
 
                                             <label for="categorie">Catégorie</label>
                                             <select class="custom-select" id="categorie" name="categorie" style="width: 100%; margin-bottom: 10px;" required>
-                                                <option selected value="mini-films">Mini-films</option>
+                                                <option selected value="mini-films">Clips</option>
                                                 <option value="freestyles">Freestyles</option>
                                                 <option value="challenges">Challenges</option>
                                             </select>
@@ -136,7 +137,7 @@
 
                                             <label for="categorie">Catégorie</label>
                                             <select class="custom-select" id="categorie" name="categorie" style="width: 100%; margin-bottom: 10px;" required>
-                                                <option value="mini-films">Mini-films</option>
+                                                <option value="mini-films">Clips</option>
                                                 <option selected value="freestyles">Freestyles</option>
                                                 <option value="challenges">Challenges</option>
                                             </select>
@@ -193,7 +194,7 @@
 
                                             <label for="categorie">Catégorie</label>
                                             <select class="custom-select" id="categorie" name="categorie" style="width: 100%; margin-bottom: 10px;" required>
-                                                <option value="mini-films">Mini-films</option>
+                                                <option value="mini-films">Clips</option>
                                                 <option value="freestyles">Freestyles</option>
                                                 <option selected value="challenges">Challenges</option>
                                             </select>

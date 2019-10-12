@@ -9,6 +9,6 @@ require __DIR__ . "/bootstrap.php";
 
 
 echo $twig->render('404.html.twig', [
-    'title' => 'Page inexistante',
+    'title' => 'Pile ou face Project - Page inexistante',
     'isConnected' => isset($_SESSION['isConnected']),
 ]);

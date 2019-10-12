@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /ressources/cv/
+Disallow: /ressources/Icones/
+Disallow: /ressources/Icones_2/
+Disallow: /ressources/Icones_3/
+Disallow: /ressources/polices/
+Disallow: /ressources/videos/
+
+Sitemap: https://www.pileoufaceproject.com/sitemap.xml

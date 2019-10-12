@@ -9,7 +9,7 @@ require __DIR__ . "/bootstrap.php";
 
 
 echo $twig->render('melanie_rolland.html.twig', [
-    'title' => 'Mélanie Rolland',
+    'title' => 'Pile ou face project - Mélanie Rolland',
     'isConnected' => isset($_SESSION['isConnected']),
     //'username' => $_SESSION['username'],
 ]);

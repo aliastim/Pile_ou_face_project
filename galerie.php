@@ -16,7 +16,7 @@ $images = $repo->findBy(
 );
 
 echo $twig->render('galerie.html.twig', [
-    'title' => 'Galerie',
+    'title' => 'Pile ou face Project - Notre galerie photo',
     'images' => $images,
     'isConnected' => isset($_SESSION['isConnected']),
     //'username' => $_SESSION['username'],
